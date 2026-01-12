@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>セルフレジ</title>
+  <style>
+    body {
+      margin: 0;
+      background: #0a7f3f;
+      color: white;
+      font-size: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+
+<div id="screen">画面をタップしてください</div>
+
+<audio id="voice" src="bag_select.mp3" preload="auto"></audio>
+
+<script>
+const screen = document.getElementById("screen");
+const audio = document.getElementById("voice");
+
+screen.addEventListener("click", () => {
+  audio.currentTime = 0;
+  audio.play();
+});
+</script>
+
+</body>
+</html>
