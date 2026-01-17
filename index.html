@@ -23,14 +23,11 @@
 
 <div id="screen">画面をタップしてください</div>
 
-<audio id="voice" src="bag_select.mp3"></audio>
-
 <script>
 const screen = document.getElementById("screen");
-const audio = document.getElementById("voice");
 
 screen.addEventListener("touchend", () => {
-  audio.currentTime = 0;
+  const audio = new Audio("bag_select.mp3");
   audio.play();
 }, { once: true });
 </script>
