@@ -2,35 +2,14 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>セルフレジ</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      background: #0a7f3f;
-      color: white;
-      font-size: 32px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      user-select: none;
-      font-family: sans-serif;
-    }
-  </style>
+  <title>音声テスト</title>
 </head>
-<body>
+<body style="font-size: 24px; text-align: center; margin-top: 50px;">
 
-<div id="screen">画面をタップしてください</div>
+<h1>音声テストページ</h1>
+<p>以下の再生ボタンを押して動作確認します</p>
 
-<script>
-const screen = document.getElementById("screen");
-
-screen.addEventListener("touchend", () => {
-  const audio = new Audio("bag_select.mp3");
-  audio.play();
-}, { once: true });
-</script>
+<audio controls id="audio" src="bag_select.mp3"></audio>
 
 </body>
 </html>
