@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>セルフレジ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
@@ -14,6 +15,7 @@
       align-items: center;
       height: 100vh;
       user-select: none;
+      font-family: sans-serif;
     }
   </style>
 </head>
@@ -21,16 +23,16 @@
 
 <div id="screen">画面をタップしてください</div>
 
-<audio id="voice" src="bag_select.mp3" preload="auto"></audio>
+<audio id="voice" src="bag_select.mp3"></audio>
 
 <script>
 const screen = document.getElementById("screen");
 const audio = document.getElementById("voice");
 
-screen.addEventListener("click", () => {
+screen.addEventListener("touchend", () => {
   audio.currentTime = 0;
   audio.play();
-});
+}, { once: true });
 </script>
 
 </body>
